@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Commissioner', sans-serif;
 }
 :root{
@@ -12,16 +12,13 @@
 --Dark-gray: hsl(0, 0%, 48%);
 }
 body{
-    width: 100vw;
-    height: 100vh;
-}
-.container{
     width: 100%;
     height: 100%;
-    background-color: aliceblue;
+    background-color:rgb(249, 246, 246);
+
 }
 /* navbar  */
-.imageContainer{
+.container{
     background: url(./images/image-hero-desktop.jpg) no-repeat center;
     background-size:cover ;
     width: 100%;
@@ -31,11 +28,11 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 45px 170px;
-    height: 300px;
+    height: 320px;
 }
 .list{
    width: 25%; 
-
+   display: none;
 }
 .navList{
     display: flex;
@@ -45,6 +42,9 @@ nav{
 li{
     all: unset;
     color: white;
+}
+li:hover{
+    cursor: pointer;
 }
 .close-menu{
     display: none;
@@ -58,21 +58,216 @@ hr{
 .sectionsContainer{
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 25px;
+}
+/* sections  */
+.section{
+    width: 50%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* first section  */
-.sectionOne{
-    width: 50%;
-    height: 300px;
-    background-color: white;
+.one{
+    position: relative;
+    row-gap: 20px;
 }
+.secionTitle{
+    font-size: 25px ;
+    font-weight: 700;
+    color: var(--Black);
+    margin-top: 20px;
+}
+.mastercraft{
+    position: absolute;
+    top: 0;
+    right: 43%;
+    transform: translate(-50% ,-50%);
+    
+}
+.oneText{
+    font-size: 15px;
+    color: var(--Dark-gray);
+}
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+button{
+    all: unset;
+    color: white;
+    width: 180px;
+    height: 56px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: red;
+    font-size: 15px;
+    font-weight: 600;
+}
+.back{
+    background-color: var(--Moderate-cyan);
+}
+.back:hover{
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+}
+.bookmark{
+    background-color:rgb(231, 225, 225);
+    color: var(--Dark-gray);
+    position: relative;
+    margin-right: 20px;
+    text-align: right;
+    padding-right: 40px;
+    box-sizing: border-box;           
+}
+.bookmark:hover{
+    cursor: pointer;
+}
+.bookmarkActive{
+    background-color: rgb(249, 246, 246);
+    color: var(--Moderate-cyan);
+    width: 200px;
+}
+.icon-bookmark{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.icon-active{
+    filter: invert(35%) sepia(13%) saturate(6228%) hue-rotate(148deg) brightness(101%) contrast(102%);
+}
+.icon-bookmark-mobile{
+    display: none;
+}
+
+/* section two  */
+.two{
+    row-gap: 50px;
+}
+.hr{
+    height: 60px;
+    width: 1px;
+    background-color: var(--Dark-gray);
+}
+.numbers{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: start;
+    padding: 20px 0;
+    column-gap: 60px;
+}
+.firstNumber{
+    font-size: 30px;
+    color: var(--Black);
+    font-weight: 700;
+    margin-bottom:5px ;
+}
+.second{
+    color: var(--Dark-gray);
+}
+.line{
+    width: 100%;
+    height: 10px;
+    background-color:  rgb(249, 246, 246);
+    border-radius: 5px;
+}
+.linePercent{
+    width: 75%;
+    height: 10px;   
+    background-color: var(--Moderate-cyan);
+    border-radius: 5px;
+}
+
+/* section three  */
+.three{
+    height: fit-content;
+    align-items: flex-start;
+    row-gap: 40px;
+    margin-bottom: 80px;
+}
+.threeTitle{
+    font-size: 20px;
+    color: var(--Black);
+    font-weight: 700;
+}
+.threeText{
+    font-size: 17.5px;
+    font-weight: 400;
+    color: var(--Dark-gray);
+    line-height: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid var(--Dark-gray);
+    border-radius: 10px;
+    height: fit-content;
+    row-gap: 30px;
+}
+.boxHeader , .footer{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Black);
+}
+.pledge{
+    color: var(--Moderate-cyan);
+    font-weight: 500;
+}
+.context{
+    color:var(--Dark-gray);
+    font-size: 18px;
+    line-height: 30px;
+}
+.footer{
+    align-items: center;
+}
+.numberLeft{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--Black);
+    
+}
+.numberLeft>span{
+    color:var(--Dark-gray);
+    font-size: 14px;
+}
+.select{
+    background-color: var(--Moderate-cyan);
+}
+.select:hover{
+    cursor: pointer;
+    background-color: var(--Dark-cyan);
+
+}
+.boxThree{
+    opacity: .5;
+}
+
+
+
 
 /* media query  */
 /* moblie  */
 @media screen and (max-width: 767px) {
-    .imageContainer{
+    .container{
         background: url(./images/image-hero-mobile.jpg) no-repeat center;
         background-size: cover;
+        width: 100%;
     }
     nav{
         width: 100%;
@@ -87,7 +282,7 @@ hr{
         border-radius: 25px;
         padding: 20px;
         top: 120px;
-        display: none;
+        z-index: 2;
     }
     .navList{
         height: 100%;
@@ -105,5 +300,56 @@ hr{
         color: black;
         font-weight: 500;
         font-size: 25px;
+    }
+
+    /* sections  */
+    .sectionsContainer{
+        padding: 20px;
+    }
+    .section{
+        width: 100%;
+        flex-direction: column;
+    }
+    .numbers{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .number{
+        text-align: center;
+    }
+    .hr{
+        width: 100px;
+        height: 1px;
+    }
+    .line , .linePercent {
+        height: 15px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+    }
+    .context{
+        width: 90%;
+    }
+    .icon-bookmark-mobile{
+        display: block;
+    }
+    .bookmark{
+        display: none;
+    }
+    .back{
+        width: 80%;
+        font-size: 20px;
+        height: 65px;
+    }
+    .secionTitle{
+        width: 60%;
+        text-align: center;
+    }
+    .oneText{
+        text-align: center;
+        width: 80%;
     }
 }
